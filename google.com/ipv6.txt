@@ -1,0 +1,6 @@
+;; UDP setup with 2001:4860:4860::8844#53(2001:4860:4860::8844) for google.com failed: network unreachable.
+;; UDP setup with 2001:4860:4860::8888#53(2001:4860:4860::8888) for google.com failed: network unreachable.
+;; UDP setup with 2606:4700:4700::1001#53(2606:4700:4700::1001) for google.com failed: network unreachable.
+;; UDP setup with 2606:4700:4700::1111#53(2606:4700:4700::1111) for google.com failed: network unreachable.
+;; UDP setup with 2620:fe::fe#53(2620:fe::fe) for google.com failed: network unreachable.
+;; no servers could be reached
