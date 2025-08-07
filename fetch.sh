@@ -1,7 +1,5 @@
 #! /usr/bin/env sh
-curl https://api.cloudflare.com/local-ip-ranges.csv -o local-ip-ranges.csv
-SUBNETS=$(cat local-ip-ranges.csv | awk -F, '{print $1}')
-rm -f local-ip-ranges.csv
+SUBNETS=$(cat ip_range.txt | awk '{print $3}')
 DOMAINS=$(cat domain.txt)
 for domain in $DOMAINS; do
     mkdir -p $domain
