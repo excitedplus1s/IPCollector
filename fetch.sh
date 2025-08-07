@@ -22,6 +22,7 @@ for domain in $DOMAINS; do
         esac
     done
     echo "fetch $domain done\n"
+    sleep 90
 done
 
 cp README_template.md README.md
