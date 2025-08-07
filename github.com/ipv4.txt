@@ -15,9 +15,17 @@
 20.217.135.5
 20.233.83.145
 20.27.177.113
+20.87.245.0
+4.225.11.194
 4.237.22.38
 ; <<>> DiG 9.18.30-0ubuntu0.24.04.2-Ubuntu <<>> github.com @1.1.1.1 -t A +subnet=104.28.218.223/32 +short
+; <<>> DiG 9.18.30-0ubuntu0.24.04.2-Ubuntu <<>> github.com @8.8.4.4 -t A +subnet=104.28.109.137/32 +short
+; <<>> DiG 9.18.30-0ubuntu0.24.04.2-Ubuntu <<>> github.com @8.8.4.4 -t A +subnet=104.28.111.100/32 +short
+; <<>> DiG 9.18.30-0ubuntu0.24.04.2-Ubuntu <<>> github.com @8.8.4.4 -t A +subnet=104.28.135.28/32 +short
+; <<>> DiG 9.18.30-0ubuntu0.24.04.2-Ubuntu <<>> github.com @8.8.8.8 -t A +subnet=104.28.111.64/32 +short
 ;; communications error to 1.0.0.1#53: timed out
 ;; communications error to 1.1.1.1#53: timed out
+;; communications error to 8.8.4.4#53: timed out
+;; communications error to 8.8.8.8#53: timed out
 ;; global options: +cmd
 ;; no servers could be reached
