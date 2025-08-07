@@ -1,0 +1,32 @@
+name: Daily DNS-Fetching
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Get Curl and Dig
+      run: |
+        sudo apt update
+        sudo apt install -y curl dnsutils
+    
+    - name: Run Fetcher
+      run: |
+        sh fetch.sh
+        
+    - name: push to origin main
+      run: |
+        echo start push
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        git add -A
+        git commit -m $(date '+%Y-%m-%d')
+        git push
