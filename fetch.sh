@@ -20,7 +20,9 @@ for domain in $DOMAINS; do
             mv $domain/ipv4_u.txt $domain/ipv4.txt
             ;;
         esac
+        sleep 0.01
     done
+    echo "fetch $domain done\n"
 done
 
 cp README_template.md README.md
