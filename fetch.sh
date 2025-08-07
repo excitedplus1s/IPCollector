@@ -9,13 +9,13 @@ for domain in $DOMAINS; do
         case $subnet in
         *":"*) 
             dns=$(awk 'BEGIN{srand();} {print rand(), $0;}' dns4.txt | sort -k1,1n | head -n 1 | awk '{print $2}')
-            dig $domain @$dns -t AAAA +subnet=$subnet +short 2>/dev/null >> $domain/ipv6.txt
+            dig $domain @$dns -t AAAA +subnet=$subnet +short | grep -v ";" 2>/dev/null >> $domain/ipv6.txt
             cat $domain/ipv6.txt | sort |uniq > $domain/ipv6_u.txt
             mv $domain/ipv6_u.txt $domain/ipv6.txt
             ;;
         *)
             dns=$(awk 'BEGIN{srand();} {print rand(), $0;}' dns4.txt | sort -k1,1n | head -n 1 | awk '{print $2}')
-            dig $domain @$dns -t A +subnet=$subnet +short 2>/dev/null >> $domain/ipv4.txt
+            dig $domain @$dns -t A +subnet=$subnet +short | grep -v ";" 2>/dev/null >> $domain/ipv4.txt
             cat $domain/ipv4.txt | sort |uniq > $domain/ipv4_u.txt
             mv $domain/ipv4_u.txt $domain/ipv4.txt
             ;;
