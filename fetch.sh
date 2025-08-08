@@ -3,6 +3,8 @@ SUBNETS=$(cat ip_range.txt | awk '{print $3}')
 DOMAINS=$(cat domain.txt)
 for domain in $DOMAINS; do
     mkdir -p $domain
+    rm -f $domain/ipv4.txt
+    rm -f $domain/ipv6.txt
     touch $domain/ipv4.txt
     touch $domain/ipv6.txt
     for subnet in $SUBNETS; do
