@@ -24,8 +24,8 @@ jobs:
     - name: push to origin main
       run: |
         echo start push
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         
         git add -A
         git commit -m $(date '+%Y-%m-%d')
